@@ -1,4 +1,13 @@
 MedicalApp.js --> se importa aqui la URL de la base de datos
+HomePage.jsx --> ahi tenemos los datos de App.jsx
+
+PALETA DE COLORES:
+
+    #BCE6FF  -> Botón de acceder
+    #2B5C75  -> Botón de registrase
+    #015C92  -> Footer y Header
+    #2BA8D9  -> Tarjetas de especialidades
+    #71BBD9  -> Color azul claro extra(para lo que sea)
 
 Componentes:
 
@@ -23,7 +32,7 @@ Componentes:
         Sidebar (con sus 3 botones)
 
         Desplegable CITAS:
-            
+
 
         DEsplegable RECETAS
 

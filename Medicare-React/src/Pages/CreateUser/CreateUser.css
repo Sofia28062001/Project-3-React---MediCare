@@ -1,0 +1,38 @@
+/*AQUI DEFINIR EL CSS DE LA VENTANA CREATE USER*/
+
+/* Contenedor principal */
+.create-user-body {
+    display: flex;
+    height: 100vh;
+    /* Ocupa todo el alto de la pantalla */
+}
+
+/* Contenedor de la imagen */
+.image-container {
+    flex: 0.4;
+    /* Ocupa la misma proporción que el formulario */
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    /* La imagen llena el contenedor horizontalmente */
+    height: 100%;
+    /* La imagen llena el contenedor verticalmente */
+    object-fit: cover;
+    /* Recorta la imagen si es necesario */
+}
+
+/* Contenedor del formulario */
+.form {
+    flex: 0.6;
+    /* Ocupa la misma proporción que la imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* Color de fondo opcional */
+}

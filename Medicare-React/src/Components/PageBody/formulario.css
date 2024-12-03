@@ -1,0 +1,98 @@
+
+.register-form-container {
+    
+    width: 40%;
+    height: 750px;
+    /* Ajusta según la altura deseada */
+    background-color: #71BBD9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-form-container h2 {
+    color: #003f64;
+}
+
+/* Configuración del formulario */
+.register-form {
+    width: 100%;
+    /* Asegurarse que ocupe todo el espacio interno */
+    max-width: 400px;
+    /* Límite máximo de ancho */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Configuración de los grupos de formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+/* Estilizado del label */
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    /* Alineación superior izquierda */
+}
+
+/* Estilizado del input */
+.form-group input {
+    padding: 10px;
+    border: 2px solid #015C92;
+    /* Márgenes azul oscuro */
+    border-radius: 4px;
+    background-color: white;
+    /* Fondo blanco */
+    font-size: 14px;
+    color:black;
+}
+
+/* Cambio de borde en foco */
+.form-group input:focus {
+    outline: none;
+    border-color: #71BBD9;
+    /* Borde más claro al enfocarse */
+}
+
+/* Botón de envío */
+.submit-button {
+    padding: 10px 20px;
+    background-color: #015C92;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #014A73;
+    /* Oscurecer al pasar el mouse */
+}
+
+/* Mensaje de error */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+    /* Alinear texto de error */
+}
+
+.asterisk {
+    color: red;
+}
