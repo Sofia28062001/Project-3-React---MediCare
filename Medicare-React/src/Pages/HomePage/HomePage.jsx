@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './HomePage.css'
 import FormularioCrearUsuario from "../../Components/PageBody/formulario"
 
-function App() {
+function HomePage() {
   const [count, setCount] = useState(0)
 
   return (
@@ -14,4 +14,4 @@ function App() {
   )
 }
 
-export default App
+export default HomePage
