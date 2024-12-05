@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import "./Home.css";
 
-const Home = () => {
+
+function Home() {
   const [showLogin, setShowLogin] = useState(false);
+
   const specialities = [
     { name: "Endocrino", image: "/endocriono.png" },
     { name: "Ginecología", image: "/ginecologo.png" },
@@ -10,6 +13,7 @@ const Home = () => {
     { name: "Traumatología", image: "/tramatologia.png" },
     { name: "Oncología", image: "/oncologo.png" },
     { name: "Medicina Interna", image: "/medicoInterno.png" },
+
   ];
   return (
     <div className="app-container">
@@ -26,7 +30,7 @@ const Home = () => {
 
       {/* Banner */}
       <div className="banner">
-        <img src="../public/mediacl.png" className="banner-image" />
+        <img src="../public/banner_pic.jpg" className="banner-image" />
         <h1 className="banner-text">
           Explicación de <br /> funcionalidad de la web
         </h1>
@@ -75,6 +79,7 @@ const Home = () => {
         </div>
       </footer>
 
+     {/*  Formulario pop-up */}
       {showLogin && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -98,7 +103,7 @@ const Home = () => {
               >
                 Forgot your password?
               </a>
-              <a href="#register">Dont have an account? Register</a>
+              <Link to="/signup"><p>Don't have an account? Register</p></Link> {/* Cambio aquí */}
             </div>
             <button
               className="close-button"

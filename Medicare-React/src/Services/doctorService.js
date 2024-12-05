@@ -9,10 +9,9 @@ import api from "../Services/index";
                 Authorization: localStorage.getItem("token"),
             },
         });
-
         return data;
     } catch (error) {
-        console.error("Error al obtener médicos:", error);
+        console.error("Error al obtener médicos:", error.message);
         throw new Error("No se pudieron obtener los médicos");
     }
 };

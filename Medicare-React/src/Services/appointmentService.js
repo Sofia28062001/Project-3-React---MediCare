@@ -48,22 +48,6 @@ import api from "../Services/index";
     }
 };
 
-// Actualizar una cita existente
-const updateAppointment = async (id, appointmentData) => {
-    try {
-        const { data } = await api.put(`/appointments/${id}`, appointmentData, {
-            headers: {
-                Authorization: localStorage.getItem("token"),
-            },
-        });
-
-        return data;
-    } catch (error) {
-        console.error(`Error al actualizar la cita con ID ${id}:`, error);
-        throw new Error("No se pudo actualizar la cita");
-    }
-};
-
 // Eliminar una cita
 const deleteAppointment = async (id) => {
     try {
@@ -84,6 +68,5 @@ export {
     getAllAppointments,
     getOneAppointment,
     createAppointment,
-    updateAppointment,
     deleteAppointment
 }

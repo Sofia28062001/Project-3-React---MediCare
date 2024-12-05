@@ -48,22 +48,6 @@ const createPrescription = async (prescriptionData) => {
     }
 };
 
-// Actualizar una receta existente
-const updatePrescription = async (id, prescriptionData) => {
-    try {
-        const { data } = await api.put(`/prescriptions/${id}`, prescriptionData, {
-            headers: {
-                Authorization: localStorage.getItem("token"),
-            },
-        });
-
-        return data;
-    } catch (error) {
-        console.error(`Error al actualizar la receta con ID ${id}:`, error);
-        throw new Error("No se pudo actualizar la receta médica");
-    }
-};
-
 // Eliminar una receta
 const deletePrescription = async (id) => {
     try {
@@ -85,6 +69,5 @@ export {
     getAllPrescriptions,
     getOnePrescription,
     createPrescription,
-    updatePrescription,
     deletePrescription
 }
