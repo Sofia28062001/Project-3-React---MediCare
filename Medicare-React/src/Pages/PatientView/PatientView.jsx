@@ -15,8 +15,10 @@ function PatientView() {
     <>
       <div className="container">
         <Navbar />
+        <div className='contenedorResponsivo' >
         <Sidebar onMenuClick={handleMenuClick} />
         <MainContent activeSection={activeSection} />
+        </div>
       </div>
     </>
   );

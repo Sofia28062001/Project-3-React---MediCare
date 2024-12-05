@@ -43,6 +43,7 @@ function MainContent({ activeSection }) {
                     setData(medicamentosResponse);
                 } else if (activeSection === 'recetas') {
                     const recetasResponse = await getAllPrescriptions();
+                    console.log(recetasResponse)
                     setData(recetasResponse);
                 }
             } catch (error) {
@@ -104,7 +105,7 @@ function MainContent({ activeSection }) {
                             <li key={index} className="card">
                                 <p><strong>Fecha:</strong> {cita.fecha}</p>
                                 <p><strong>Hora:</strong> {cita.hora}</p>
-                                <p><strong>Especialidad:</strong> {cita.doctor}</p>
+                                <p><strong>Especialidad:</strong> {cita.especialidad}</p>
                             </li>
                         ))}
                     </ul>
@@ -167,8 +168,8 @@ function MainContent({ activeSection }) {
                     {data.map((medicamento, index) => (
                         <li key={index} className="card">
                             <p><strong>Nombre del medicamento:</strong> {medicamento.nombre}</p>
-                            <p><strong>Frecuencia:</strong> {medicamento.frecuencia}</p>
-                            <p><strong>Dosis:</strong> {medicamento.dosis}</p>
+                            <p><strong>Frecuencia:</strong> {medicamento.efectoSecundario}</p>
+                            <p><strong>Dosis:</strong> {medicamento.tipo}</p>
                         </li>
                     ))}
                 </ul>
@@ -179,6 +180,7 @@ function MainContent({ activeSection }) {
                 <ul>
                     {data.map((receta, index) => (
                         <li key={index} className="card">
+                            <p><strong>Nombre:</strong> {receta.nombre}</p>
                             <p><strong>Descripción:</strong> {receta.descripcion}</p>
                             <p><strong>Fecha:</strong> {receta.fecha}</p>
                         </li>
